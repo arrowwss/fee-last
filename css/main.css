@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #00014a, #281f6f);
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.layer:nth-child(1) {
+  background-image: url("../img-20240303T121521Z-001/img/1.png");
+}
+.layer:nth-child(2) {
+  background-image: url("../img-20240303T121521Z-001/img/2.png");
+}
+.layer:nth-child(3) {
+  background-image: url("../img-20240303T121521Z-001/img/3.png");
+}
+.layer:nth-child(4) {
+  background-image: url("../img-20240303T121521Z-001/img/4.png");
+}
+.layer:nth-child(5) {
+  background-image: url("../img-20240303T121521Z-001/img/5.png");
+}
+.layer:nth-child(6) {
+  background-image: url("../img-20240303T121521Z-001/img/6.png");
+}
+.layer:nth-child(7) {
+  background-image: url("../img-20240303T121521Z-001/img/7.png");
+}
+
+/* new container classes */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 38%;
+  position: absolute;
+  z-index: 10;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  gap: 4rem;
+  margin-left: 15vh;
+}
+
+
+.get-started-btn {
+  background-color: #5bc0de; /* Sky blue color */
+  color: #fff; /* White text */
+  padding: 15px 30px; /* Adjust padding for better appearance */
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 35px; /* Adjust border radius for a smoother look */
+  font-size: 18px; 
+  font-weight: bold; /* Emphasize the text */
+  text-transform: uppercase; /* Make the text uppercase for a more stylish look */
+  position: relative; /* Required for the glowing effect */
+  overflow: hidden; /* Required for the glowing effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for smoother animation */
+}
+
+/* Animation on hover */
+.get-started-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white glow */
+  border-radius: 50%;
+  z-index: -1; /* Move behind the button */
+  transition: transform 0.5s ease; /* Add transition for smoother animation */
+  transform: translate(-50%, -50%) scale(0); /* Initial state */
+}
+
+.get-started-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Scale up on hover */
+}
+
+.get-started-btn:hover {
+  background-color: #31b0d5; /* Brighter sky blue on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Light shadow on hover */
+  transform: translateY(-3px); /* Move the button slightly up on hover */
+}
+
+
+.fade-in-text {
+  opacity: 0; 
+  animation: fade-in 1.5s ease-in-out forwards; 
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+
+
+
+
+
+
+
+
